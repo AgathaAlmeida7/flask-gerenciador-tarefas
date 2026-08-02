@@ -1,0 +1,46 @@
+<!--ESTRUTURA PRINCIPAL DA INTEGRACAO.AS OUTRAS PAGINAS IRAO HERDAR ESSA ESTRUTRURA-->
+<!--HTML DEIXA DE SER INDEPENDENTE,VAI REUTILIZAR UM LAYOUT COMUM-->
+<!--SE EU QUERER ALTERAR O TITULO DO SITE, ANTIGAMENTE EU IRIA TER QUE INVIDUALMENTE PARA CADA PAGINA,COM ESSE ARQUIVO EU SO PRECISO ALTERAR A BASE. TODAS AS PAGINAS ELAS IRAO ALTERAR DE FORMA AUTOMATICA-->
+<!-- ARQUIVO CONSIDERADO O CORACAO DA INTERFACE-->
+
+<!-- O QUE TERA INICIALMENTE AQUI?
+ 
+1-ESTRUTURA HTML,
+2-HEAD
+3-BODY
+4-TITULO
+5-UM CABEÇALHO  DA APP
+6-UM BLOCO DE CONTEUDO
+
+MAIS TARDE... QUANDO FOR PRA CSS E NAVEGAÇÃO ELE RECEBERA:
+
+-MENU
+-LINKS
+-RODAPES
+-BOOTSTRAP(VAI VER SE VAI USAR OU NAO)
+
+-> isso vai deixar as outras paginas mais menores ,pois nao vai precisar repetir toda a estrutura html
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema Gerenciador de Tarefas</h1>
+    </header>
+
+    <hr>
+
+    {% block conteudo %}
+    {% endblock %}
+
+</body>
+
+</html>
